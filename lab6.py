@@ -19,6 +19,18 @@ def encoding(dec_password):
         password += 1
     return "".join(new_list)
 
+def decoding(enc_password):
+    password = 0
+    new_list = list(enc_password)
+    enc_password = 0
+    for i in new_list:
+        new_list[password] = int(i) - 3
+        password += 1
+    password = 0
+    for i in new_list:
+        new_list[password] = str(i)
+        password += 1
+    return "".join(new_list)
 
 def main():
     user_input = 0
